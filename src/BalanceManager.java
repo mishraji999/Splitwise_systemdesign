@@ -22,12 +22,19 @@ public class BalanceManager {
 
     }
 
+    public Map<User,Double> getUserShare(){
+        return userShare;
+    }
+
     public void printUserShare(){
         System.out.println("Per Use share in the payment");
         for(User entry : userShare.keySet()){
             System.out.println(entry.getName() +"'s share is " + userShare.get(entry));
         }
     }
+
+
+
 
 
     // TODO: Support different split types (percentage, exact amounts)

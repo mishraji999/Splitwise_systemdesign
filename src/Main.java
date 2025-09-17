@@ -13,6 +13,7 @@ public class Main {
         Set<User> group1 = new HashSet<>();
         group1.add(u1);
         group1.add(u2);
+        group1.add(u3);
 
         Expense e1 = new Expense(300,"Cafe",u1,group1);
 
@@ -21,10 +22,15 @@ public class Main {
 
         e1.addParticipant(u3);
 
-//        System.out.println(e1.toString());
+        System.out.println(e1.toString());
 
         BalanceManager b1 = new BalanceManager(e1);
 
         b1.printUserShare();
+//        System.out.println(b1.getUserShare());
+
+        SettlementManager s1 = new SettlementManager(e1,b1);
+
+        System.out.println(s1.toString());;
     }
 }
