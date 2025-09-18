@@ -11,7 +11,7 @@ public class Main {
         User u3 = new User(3,"Sushma","sgvwe@gmail.com");
 
         Set<User> group1 = new HashSet<>();
-        group1.add(u1);
+//        group1.add(u1);
         group1.add(u2);
         group1.add(u3);
 
@@ -20,17 +20,17 @@ public class Main {
 //        System.out.println(u1.toString());
 //        System.out.println(e1.toString());
 
-        e1.addParticipant(u3);
+//        e1.addParticipant(u3);
 
-        System.out.println(e1.toString());
+//        System.out.println(e1.toString());
 
         BalanceManager b1 = new BalanceManager(e1);
 
-        b1.printUserShare();
+//        b1.printUserShare();
 //        System.out.println(b1.getUserShare());
 
         SettlementManager s1 = new SettlementManager(e1,b1);
 
-        System.out.println(s1.toString());;
+        s1.printClearBalance();
     }
 }
